@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Envelope</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8d7da;
+        }
+        .envelope {
+            position: relative;
+            width: 200px;
+            height: 150px;
+            background-color: #ff69b4;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 10px 10px 9px rgb(228, 158, 170);
+        }
+        .flap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ff1493;
+            clip-path: polygon(0 0, 100% 0, 50% 50%);
+            transition: transform 0.3s ease;
+        }
+        .envelope:hover .flap {
+            transform: translateY(-50px);
+        }
+        .message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Arial, sans-serif;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        h2{
+				color: #FE7696;
+
+            font-family: 'Sacramento', cursive;
+        }
+    </style>
+</head>
+<body>
+    <div onclick="go()" class="envelope">
+        <div class="message"></div>
+    </div> <br><br>
+    <center>
+        <h2>Click the envelope kar</h2>
+    </center>
+</body>
+<script>
+    function go(){
+        location.replace("karel.html");
+    }
+</script>
+</html>
